@@ -19,7 +19,7 @@ colors.setTheme({
 	blk: "black"
 });
 
-// OBJECT of Top #MeToo Offenders (array) and gallows (array) which are used to drive the game and display
+// OBJECT of Top #MeToo offenders (array) and gallows (array) which are used to drive the game and display
 exports.hangmansGallery = {
   offenders:[
 	"HARVEY WEINSTEIN",
