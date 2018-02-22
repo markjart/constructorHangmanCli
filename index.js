@@ -112,6 +112,19 @@ var hangman = {
 						that.baseScreen();
 						console.log(colors.input("Letters guessed: " + that.guessedLetters));
 						console.log("What the...?!  Why'd you let that bastard go?!".verbose);
+						console.log(colors.verbose("YOU BETTER HANG THE NEXT ONE!!"));						
+					
+					
+						setTimeout(function(){	
+							that.wordBank= Gallows.hangmansGallery.offenders;
+							that.display= 0;
+							that.currentWord= null;
+							that.guessedLetters = [];
+							that.resetGuessesRemaining();
+							that.newGame();
+						}, 3000);
+						
+						
 					}
 					else {
 						console.log(colors.info("Guesses remaining: " + that.guessesRemaining + "\n")); 
@@ -128,6 +141,19 @@ var hangman = {
 				else if(that.guessesRemaining === 0){
 					console.log(colors.verbose("Game over!  Another one bites the dust!"));
 					console.log(colors.verbose("That asshole's name was: " + that.currentWord.word));
+							console.log(colors.verbose("PREPARE TO HANG ANOTHER!!"));	
+							
+							setTimeout(function(){
+								that.wordBank= Gallows.hangmansGallery.offenders;
+								that.display = 0;
+								that.currentWord = null;
+								that.guessedLetters = [];
+								that.resetGuessesRemaining();
+								that.newGame();					
+							}, 3000);
+					
+					
+					
 				}
 			} 
 			else {
